@@ -57,7 +57,7 @@ func ==(lhs: TestMappable, rhs: TestMappable) -> Bool {
 	return lhs.value == rhs.value
 }
 
-class CustomDictionary<KeyType: Hashable, ValueType>: Mappable {
+class CustomDictionary<KeyType: Hashable, ValueType: Mappable>: Mappable {
 	var _dictionary: [KeyType: ValueType]
 
 	init() {
